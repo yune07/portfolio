@@ -1,0 +1,16 @@
+.nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  gap: 24px;
+  padding: 16px 24px;
+  background: rgba(242, 244, 243, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
