@@ -30,20 +30,19 @@
 }
 
 .navLinks a {
-  text-decoration: none;
-  color: var(--muted);
-  font-weight: 500;
-  padding: 8px 10px;
+  color: var(--text);
+  padding: 8px 12px;
   border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .navLinks a:hover {
-  color: var(--text);
+  background: rgba(31, 78, 216, 0.06);
 }
 
 .navLinks a.active {
-  color: var(--text);
-  background: rgba(31, 78, 216, 0.10);
+  background: rgba(31, 78, 216, 0.12);
+  font-weight: 600;
 }
 
 
@@ -54,6 +53,7 @@
   padding-top: 25vh;
   padding-left: 24px;
   padding-right: 24px;
+  position: relative;
 }
 
 .heroInner {
@@ -78,6 +78,14 @@
   font-size: 2.0em;
   margin-top: 8px;
   margin-bottom: 24px;
+}
+
+
+.meta {
+  display: block;
+  margin-top: 32px;
+  font-size: 14px;
+  opacity: 0.6;
 }
 
 .photoGroup {
@@ -106,10 +114,42 @@
   z-index: 2;
 }
 
+.scrollHint {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.1;
+}
+
+.scrollArrow {
+  width: 100px;
+  height: auto;
+  display: block;
+  animation: nudge 2s ease-in-out infinite;
+}
+
+
+
+@keyframes nudge {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
 .section {
   max-width: 75vw;
   margin: 0 auto;
-  height: 100vh;
+  height: 80vh;
 }
 
 

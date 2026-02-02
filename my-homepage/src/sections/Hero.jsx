@@ -10,6 +10,7 @@ export default function Hero() {
           <p className="accent">
             I build digital products between technology and people.
           </p>
+          <span className="meta">Business Information Systems · Digital Projects</span>
         </div>
         <div className="photoGroup">
             <div className="photoBg">
@@ -17,9 +18,12 @@ export default function Hero() {
             <img src={profileImg} alt="Portrait of Ji Yune" className="photoImg"
             />
         </div>
-
-
-
+      </div>
+      <div className="scrollHint">
+        <img     
+          src="/down-arrow.svg"
+          alt="Scroll down"
+          className="scrollArrow"/>
       </div>
     </section>
   );

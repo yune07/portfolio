@@ -15,18 +15,28 @@ export default function NavBar() {
       .map((l) => document.getElementById(l.id))
       .filter(Boolean);
 
+    console.log(
+      "sections found:",
+      sections.map((s) => s.id)
+    );
+
+    if (sections.length === 0) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries
+        const best = entries
           .filter((e) => e.isIntersecting)
-          .sort((a, b) => (b.intersectionRatio ?? 0) - (a.intersectionRatio ?? 0))[0];
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-        if (visible?.target?.id) setActive(visible.target.id);
+        if (best?.target?.id) {
+          console.log("active:", best.target.id, best.intersectionRatio);
+          setActive(best.target.id);
+        }
       },
       {
         root: null,
-        threshold: [0.2, 0.35, 0.5, 0.65],
-        rootMargin: "-20% 0px -65% 0px",
+        threshold: [0, 0.1, 0.25, 0.4, 0.6],
+        rootMargin: "0px 0px -50% 0px",
       }
     );
 
