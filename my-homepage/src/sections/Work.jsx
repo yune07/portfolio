@@ -29,26 +29,31 @@ export default function Work() {
 
   return (
     <section id="work" className="section work">
+  <div
+    className="scrollSentinel"
+    data-id="work"
+    style={{ position: "absolute", top: 0 }}
+  />
       <h1>Work</h1>
-<div className="workGrid">
-  {workItems.map((item) => (
-    <div
-      key={item.id}
-      className={`workCard ${openCard === item.id ? "open" : ""}`}
-      onClick={() =>
-        setOpenCard(openCard === item.id ? null : item.id)
-      }
-    >
-      <img src={item.logo} alt={item.title} />
+      <div className="workGrid">
+        {workItems.map((item) => (
+          <div
+            key={item.id}
+            className={`workCard ${openCard === item.id ? "open" : ""}`}
+            onClick={() =>
+              setOpenCard(openCard === item.id ? null : item.id)
+            }
+          >
+            <img src={item.logo} alt={item.title} />
 
-      {openCard === item.id && (
-        <div className="cardContent">
-          <p>{item.text}</p>
-        </div>
-      )}
-    </div>
-  ))}
-</div>
+            {openCard === item.id && (
+              <div className="cardContent">
+                <p>{item.text}</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

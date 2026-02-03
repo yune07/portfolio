@@ -44,7 +44,14 @@
   background: rgba(31, 78, 216, 0.12);
   font-weight: 600;
 }
+.scrollSentinel {
+  position: absolute;
+  top: 0;
+  height: 1px;
+  width: 100%;
+}
 
+/*Hero*/
 
 .hero {
   height: 75vh;
@@ -135,9 +142,11 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(6px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -150,11 +159,12 @@
   max-width: 75vw;
   margin: 0 auto;
   height: auto;
+  position: relative;
 }
 
 
 .section h1 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -169,15 +179,16 @@
 
 }
 
-.TextBlock{
+/*About*/
+.TextBlock {
   background-color: rgba(59, 92, 255, 0.04);
   padding: 24px;
   margin-bottom: 10vh;
 }
 
 .TextBlock h2 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 500;
   margin-bottom: 10px;
   margin-left: 80px;
   margin-right: 80px;
@@ -185,7 +196,7 @@
 
 
 .TextBlock p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #444;
   line-height: 1.6;
   margin-left: 80px;
@@ -195,16 +206,21 @@
 
 
 /*Work*/
+.work {
+
+  padding-bottom: 10vh;
+}
 .workGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 48px;
-    background: #f5f7fb;
+  background: #f5f7fb;
   padding: 48px;
-    margin-bottom: 100px;
-  
+  margin-bottom: 100px;
+
 }
+
 .workCard {
   background: #ffffff;
   border-radius: 12px;
@@ -232,9 +248,10 @@
 .logoWrap {
   display: flex;
   justify-content: center;
-    width: 100%;
+  width: 100%;
   height: 60px;
 }
+
 .logoWrap img {
   max-height: 40px;
   max-width: 120px;
@@ -266,6 +283,7 @@
 .workCard:hover {
   background: #f0f3fa;
 }
+
 .workCard {
   transition: background 0.2s ease;
 }
@@ -275,19 +293,20 @@
 .study {
   margin-bottom: 120px;
 }
+
 .studyBlock {
   background: #f5f7fb;
   padding: 32px;
   border-radius: 16px;
   margin-top: 48px;
-    overflow: hidden;
- 
+  overflow: hidden;
+
 
 }
 
 
 .studyHeader {
-    background: rgba(59, 92, 255, 0.04);  
+  background: rgba(59, 92, 255, 0.04);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -297,11 +316,14 @@
   border-radius: 20px;
 
 }
+
 .studyHeaderLeft {
   display: flex;
   align-items: center;
   gap: 16px;
+  padding: 24px;
 }
+
 .studyIndicator {
   width: 16px;
   height: 16px;
@@ -327,11 +349,13 @@
   font-size: 0.9rem;
   opacity: 0.6;
 }
+
 .studyIntro {
   margin-top: 24px;
   font-weight: 500;
-  max-width: 700px;
+  max-width: 60vw;
 }
+
 .studyDetails {
   max-height: 0;
   overflow: hidden;
@@ -342,4 +366,56 @@
 .studyBlock.open .studyDetails {
   max-height: 600px;
   opacity: 0.85;
+}
+
+.studyProject {
+  margin-top: 24px;
+}
+
+.studyProject h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.studyProject p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+
+/*contact*/
+.contact {
+  margin-bottom: 120px;
+}
+.contactContent {
+background: #f5f7fb;
+border-radius: 20px;
+padding: 20px;
+margin-bottom: 30vh;
+}
+
+.contactIntro {
+  margin-top: 24px;
+  max-width: 60vw;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+.contactLinks {
+  margin-top: 32px;
+  display: flex;
+  gap: 24px;
+}
+
+.contactLinks a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #1f4ed8;
+  transition: opacity 0.2s ease;
+}
+
+.contactLinks a:hover {
+  opacity: 0.7;
 }

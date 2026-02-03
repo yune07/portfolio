@@ -22,27 +22,40 @@ export default function NavBar() {
 
     if (sections.length === 0) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const best = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+   const observer = new IntersectionObserver(
+  (entries) => {
+    const visible = entries
+      .filter((e) => e.isIntersecting)
+      .sort(
+        (a, b) =>
+          Math.abs(a.boundingClientRect.top) -
+          Math.abs(b.boundingClientRect.top)
+      )[0];
 
-        if (best?.target?.id) {
-          console.log("active:", best.target.id, best.intersectionRatio);
-          setActive(best.target.id);
-        }
-      },
-      {
-        root: null,
-        threshold: [0, 0.1, 0.25, 0.4, 0.6],
-        rootMargin: "0px 0px -50% 0px",
-      }
-    );
+    if (visible) {
+      setActive(visible.target.dataset.id);
+    }
+  },
+  {
+rootMargin: "-40% 0px -40% 0px", threshold: [0, 0.25, 0.5]
 
-    sections.forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
+
+
+  }
+);
+
+
+
+    const sentinels = document.querySelectorAll(".scrollSentinel");
+    sentinels.forEach((el) => observer.observe(el));
+
+    // Cleanup (sehr wichtig)
+    return () => {
+      sentinels.forEach((el) => observer.unobserve(el));
+    };
   }, []);
+
+ 
 
   return (
     <nav className="nav">

@@ -1,25 +1,31 @@
 export default function Contact() {
-  return (
-    <section id="contact" className="section">
-      <h1>Contact</h1>
-        <div className="TextBlock">
-        <h2>
-        Business Information Systems graduate with experience in digital projects across 
-        corporate environments.<br/><br/>
-        </h2>
-        <p>
-        I come from Business Information Systems and work at the intersection of technology 
-        and application. As a master’s graduate, I bring experience from university projects 
-        and student roles in corporate environments. My background combines technical 
-        understanding, analytical thinking, and a strong focus on users, processes, and 
-        context. <br/><br/>
-        I enjoy working where structure, logic, and design come together, and where 
-        different perspectives contribute to better solutions. I work in a focused and 
-        reliable way and value clear communication and thoughtful collaboration. What 
-        motivates me most is developing digital products and concepts that are clear, 
-        maintainable, and genuinely useful.
-        </p>
-      </div>
-    </section>
-  );
+    return (
+        <section id="contact" className="section contact">
+  <div
+    className="scrollSentinel"
+    data-id="contact"
+    style={{ position: "absolute", top: 0 }}
+  />
+            <h1>Contact</h1>
+            <div className="contactContent">
+
+            <p className="contactIntro">
+                If you would like to talk, collaborate, or simply exchange ideas, feel free
+                to reach out.
+            </p>
+
+            <div className="contactLinks">
+                <a href="mailto:jiyune1997@gmail.com">jiyune1997@gmail.com</a>
+                <a
+                    href="https://www.linkedin.com/in/ji-yune-whang-8397541b8/"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    LinkedIn
+                </a>
+            </div>
+            </div>
+        </section>
+
+    );
 }
