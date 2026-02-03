@@ -269,3 +269,77 @@
 .workCard {
   transition: background 0.2s ease;
 }
+
+
+/*study*/
+.study {
+  margin-bottom: 120px;
+}
+.studyBlock {
+  background: #f5f7fb;
+  padding: 32px;
+  border-radius: 16px;
+  margin-top: 48px;
+    overflow: hidden;
+ 
+
+}
+
+
+.studyHeader {
+    background: rgba(59, 92, 255, 0.04);  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+  min-height: 100px;
+  border-radius: 20px;
+
+}
+.studyHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.studyIndicator {
+  width: 16px;
+  height: 16px;
+  opacity: 0.4;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.studyIndicator.open {
+  transform: rotate(180deg);
+  opacity: 0.7;
+}
+
+.studyHeader:hover .studyIndicator {
+  opacity: 0.6;
+}
+
+.studyMeta h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.studyMeta span {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+.studyIntro {
+  margin-top: 24px;
+  font-weight: 500;
+  max-width: 700px;
+}
+.studyDetails {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.studyBlock.open .studyDetails {
+  max-height: 600px;
+  opacity: 0.85;
+}

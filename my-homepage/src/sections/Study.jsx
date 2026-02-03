@@ -1,25 +1,81 @@
+import { useState } from "react";
+const studyItems = [
+  {
+    id: "tu",
+    logo: "/tu-darmstadt.svg",
+    title: "Business Information Systems",
+    place: "Technische Universität Darmstadt",
+    intro:
+      "Business Information Systems with a focus on digital systems, processes, and applied technology.",
+    details: [
+      "I developed a strong foundation in system thinking, structured analysis, and translating requirements into clear concepts.",
+      "My studies focused on the interaction between technology and real world application.",
+    ],
+  },
+  {
+    id: "korea",
+    logo: "/ewha.svg",
+    title: "Exchange Semester",
+    place: "Ewha Womans University, Seoul",
+    intro:
+      "Exchange semester with a focus on digital innovation, collaboration, and cross cultural project work.",
+    details: [
+      "I studied in an international academic environment and worked closely with students from different cultural backgrounds.",
+      "Project based courses emphasized user centered thinking and practical problem solving.",
+    ],
+  },
+];
+
+
+
+
 export default function Study() {
+  const [openStudy, setOpenStudy] = useState(null);
   return (
-    <section id="study" className="section">
-      <h1>Study</h1>
-        <div className="TextBlock">
-        <h2>
-        Business Information Systems graduate with experience in digital projects across 
-        corporate environments.<br/><br/>
-        </h2>
-        <p>
-        I come from Business Information Systems and work at the intersection of technology 
-        and application. As a master’s graduate, I bring experience from university projects 
-        and student roles in corporate environments. My background combines technical 
-        understanding, analytical thinking, and a strong focus on users, processes, and 
-        context. <br/><br/>
-        I enjoy working where structure, logic, and design come together, and where 
-        different perspectives contribute to better solutions. I work in a focused and 
-        reliable way and value clear communication and thoughtful collaboration. What 
-        motivates me most is developing digital products and concepts that are clear, 
-        maintainable, and genuinely useful.
-        </p>
+<section id="study" className="section study">
+  <h1>Study</h1>
+
+  {studyItems.map((item) => (
+    <div
+      key={item.id}
+      className={`studyBlock ${openStudy === item.id ? "open" : ""}`}
+    >
+<div
+  className="studyHeader"
+  onClick={() =>
+    setOpenStudy(openStudy === item.id ? null : item.id)
+  }
+>
+  <div className="studyHeaderLeft">
+    <img src={item.logo} alt={item.place} />
+
+    <div className="studyMeta">
+      <h2>{item.title}</h2>
+      <span>{item.place}</span>
+    </div>
+  </div>
+
+<img
+  src="/chevron-down.svg"
+  alt=""
+  className={`studyIndicator ${
+    openStudy === item.id ? "open" : ""
+  }`}
+/>
+
+</div>
+
+      <p className="studyIntro">{item.intro}</p>
+
+      <div className="studyDetails">
+        {item.details.map((text, index) => (
+          <p key={index}>{text}</p>
+        ))}
       </div>
-    </section>
+    </div>
+  ))}
+</section>
+
+
   );
 }
