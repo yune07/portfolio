@@ -3,7 +3,7 @@ import { useState } from "react";
 const studyItems = [
   {
     id: "tu",
-    logo: "public/tu-darmstadt.svg",
+    logo: "/tu-darmstadt.svg",
     title: "Business Information Systems",
     place: "Technische Universität Darmstadt",
     intro:
@@ -23,7 +23,7 @@ const studyItems = [
   },
   {
     id: "korea",
-    logo: "public/ewha.svg",
+    logo: "/ewha.svg",
     title: "Exchange Semester",
     place: "Ewha Womans University, Seoul",
     intro:
