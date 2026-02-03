@@ -2,21 +2,21 @@ import { useState } from "react";
 const workItems = [
   {
     id: "fresenius",
-    logo: "/fresenius.svg",
+    logo: "public/fresenius.svg",
     title: "Fresenius Kabi",
     text:
       "Master thesis and student work focused on digital supply chain transparency.",
   },
   {
     id: "mercedes",
-    logo: "/mercedes.svg",
+    logo: "public/mercedes.svg",
     title: "Mercedes-Benz",
     text:
       "Student role in digital projects with focus on data driven processes and coordination.",
   },
   {
     id: "lg",
-    logo: "/lg.svg",
+    logo: "public/lg.svg",
     title: "LG",
     text:
       "Working student position with focus on localization and documentation processes.",

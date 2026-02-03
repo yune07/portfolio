@@ -21,7 +21,7 @@ export default function Hero() {
       </div>
       <div className="scrollHint">
         <img     
-          src="/down-arrow.svg"
+          src="public/down-arrow.svg"
           alt="Scroll down"
           className="scrollArrow"/>
       </div>
