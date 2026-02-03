@@ -79,7 +79,7 @@ export default function Study() {
             </div>
 
             <img
-              src="/chevron-down.svg"
+              src="chevron-down.svg"
               alt=""
               className={`studyIndicator ${openStudy === item.id ? "open" : ""
                 }`}
