@@ -30,6 +30,9 @@ export default function Contact() {
                 >
                     GitHub
                 </a>
+                <a href="/CV_JiYune.pdf" download>
+  Download CV
+</a>
             </div>
             </div>
         </section>

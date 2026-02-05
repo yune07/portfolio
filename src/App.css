@@ -44,6 +44,7 @@
   background: rgba(31, 78, 216, 0.12);
   font-weight: 600;
 }
+
 .scrollSentinel {
   position: absolute;
   top: 0;
@@ -160,6 +161,7 @@
   margin: 0 auto;
   height: auto;
   position: relative;
+    scroll-margin-top: 90px;
 }
 
 
@@ -265,7 +267,6 @@
   max-height: 90%;
   overflow: auto;
   border: 1px solid rgba(255, 255, 255, 0.10);
-
   border-radius: 18px;
   padding: 18px 18px;
 }
@@ -334,98 +335,224 @@
 }
 
 /*study*/
-.study {
-  margin-bottom: 120px;
+#study {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.studySummary.closed {
+  display: -webkit-box;
+
+  overflow: hidden;
 }
 
-.studyBlock {
+
+.studyList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 18px;
   background: #f5f7fb;
-  padding: 32px;
-  border-radius: 16px;
-  margin-top: 48px;
+}
+
+.studyItem {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
   overflow: hidden;
+}
 
+.studyLogoWrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  flex: 0 0 auto;
+  overflow: hidden;
+}
 
+.studyLogo {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 
 .studyHeader {
-  background: rgba(59, 92, 255, 0.04);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
   width: 100%;
-  min-height: 100px;
-  border-radius: 20px;
+  outline: none;
+  background: rgba(31, 78, 216, 0.12);
+  border: 0;
+  cursor: pointer;
+padding: 0 20px 0 0;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.studyHeader:focus-visible {
+  outline: 2px solid rgba(31, 78, 216, 0.6);
+  outline-offset: 4px;
+  border-radius: 18px;
 }
 
 .studyHeaderLeft {
   display: flex;
+  gap: 14px;
   align-items: center;
-  gap: 16px;
-  padding: 24px;
+}
+.studyLogo {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+.studyText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 4px;
 }
 
-.studyIndicator {
-  width: 16px;
-  height: 16px;
-  opacity: 0.4;
-  transition: transform 0.25s ease, opacity 0.2s ease;
+
+.studyTitle {
+  font-weight: 650;
+  font-size: 16px;
+  line-height: 1.2;
+
 }
 
-.studyIndicator.open {
-  transform: rotate(180deg);
+.studySubtitle {
+  font-size: 13px;
+  opacity: 0.85;
+  margin-top: 4px;
+
+}
+
+.studyChevron {
   opacity: 0.7;
+  font-size: 16px;
 }
 
-.studyHeader:hover .studyIndicator {
-  opacity: 0.6;
+.studyBody {
+  padding: 0 18px 18px 18px;
 }
 
-.studyMeta h2 {
-  margin: 0;
-  font-size: 1.25rem;
-}
-
-.studyMeta span {
-  font-size: 0.9rem;
-  opacity: 0.6;
-}
-
-.studyIntro {
-  margin-top: 24px;
-  font-weight: 500;
-  max-width: 65vw;
-}
-
-.studyDetails {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.35s ease, opacity 0.25s ease;
-}
-
-.studyBlock.open .studyDetails {
-  max-height: 600px;
-  opacity: 0.85;
-}
-
-.studyProject {
-  margin-top: 24px;
-}
-
-.studyProject h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.studyProject p {
-  font-size: 0.95rem;
+.studySummary {
+  margin-top: 8px;
+  font-size: 14px;
   line-height: 1.6;
-  opacity: 0.85;
+  opacity: 0.95;
+}
+
+.degreeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.degreeCard {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 14px 14px;
+}
+
+.degreeLevel {
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.degreeHeadline {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chip {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255);
+  background: rgba(255, 255, 255, 0.04);
+  opacity: 0.95;
+}
+.chipList {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.chipItem {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+
+.projectBox {
+  margin-top: 14px;
+  border-top: 3px solid rgba(255, 255, 255);
+  padding-top: 12px;
+}
+
+.projectTitle {
+  font-weight: 650;
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+.projectText {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+@media (max-width: 900px) {
+  .degreeGrid {
+    grid-template-columns: 1fr;
+  }
+}
+.exchangeGrid {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.exchangeBlock {
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  padding-top: 14px;
+}
+
+.exchangeTitle {
+  font-weight: 650;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.exchangeText {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.95;
 }
 
 
@@ -433,11 +560,12 @@
 .contact {
   margin-bottom: 120px;
 }
+
 .contactContent {
-background: #f5f7fb;
-border-radius: 20px;
-padding: 20px;
-margin-bottom: 30vh;
+  background: #f5f7fb;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 30vh;
 }
 
 .contactIntro {
@@ -447,6 +575,7 @@ margin-bottom: 30vh;
   line-height: 1.6;
   opacity: 0.85;
 }
+
 .contactLinks {
   margin-top: 32px;
   display: flex;
