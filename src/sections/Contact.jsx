@@ -30,7 +30,7 @@ export default function Contact() {
                     >
                         GitHub
                     </a>
-                    <a href={`${import.meta.env.BASE_URL}CV_JiYune.pdf`} download>
+                    <a href={`${import.meta.env.BASE_URL}JiYune_CV26_ENG.pdf`} download>
                         Download CV
                     </a>
 
