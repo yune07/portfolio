@@ -23,6 +23,13 @@ export default function Contact() {
                 >
                     LinkedIn
                 </a>
+                                <a
+                    href="https://github.com/yune07"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    GitHub
+                </a>
             </div>
             </div>
         </section>

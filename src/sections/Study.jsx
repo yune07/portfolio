@@ -7,17 +7,17 @@ const studyItems = [
     title: "Business Information Systems",
     place: "Technische Universität Darmstadt",
     intro:
-      "Business Information Systems with a focus on digital systems, processes, and applied technology.",
+      "Business Information Systems with a focus on digital systems, data and AI, and bridging business and technology.",
     details: [
       {
-        title: "Conceptual Design of a Digital System",
+        title: "B.Sc. in Business Information Systems: Built a strong foundation across business and computer science and learned to translate complex topics into clear models and requirements.",
         description:
-          "I worked on the analysis and conceptual design of a digital system to support business processes. The focus was on understanding requirements, structuring information flows, and translating them into a coherent system concept.",
+          "The B.Sc. in Business Information Systems built a strong foundation across business and computer science, supported by quantitative and legal basics. Beyond the content, it trained structured thinking and a practical way of working between both worlds. Technical courses strengthened problem solving and system understanding, while business courses added context for how decisions, processes, and constraints work in organizations. Information systems topics connected this by turning complex situations into clear process models, concepts, and requirements. The bachelor’s thesis on AI and privacy sharpened awareness that digital solutions need to be responsible and understandable, not only functional.",
       },
       {
-        title: "System Analysis and Process Modeling",
+        title: "M.Sc. in Business Information Systems: Deepened expertise in digital business and AI and learned to connect system level thinking with practical, actionable recommendations.",
         description:
-          "I analyzed existing processes and improvement potentials, balancing technical feasibility with user and business needs. This strengthened my system thinking and communication skills.",
+          "The M.Sc. in Business Information Systems added depth in digital business and data and AI related technologies. Topics such as enterprise architecture and digital business models strengthened the ability to think across systems, stakeholders, and long term impacts. Courses in AI and NLP provided a realistic understanding of what data driven methods can and cannot do, while HCI and ethics added a user and impact perspective. The master’s thesis on implementing a digital twin in a pharmaceutical supply chain strengthened the ability to combine research and practice and translate insights into concrete recommendations. This combination supports a profile that can structure complex topics, communicate clearly, and connect technology with practical use in organizations.",
       },
     ],
   },
