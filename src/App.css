@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 50;
   background: rgba(242, 244, 243, 0.85);
-  backdrop-filter: blur(10px);
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -17,6 +17,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+    backdrop-filter: blur(10px);
 }
 
 .brand {

@@ -76,6 +76,7 @@ button:focus-visible {
 @media (max-width: 768px) {
 
   /*Navbar*/
+
   .brand {
     white-space: nowrap;
     font-size: 14px;
@@ -92,17 +93,35 @@ button:focus-visible {
   /*Hero*/
   .hero {
     height: auto;
-    padding-top: 120px;
+    padding-top: 100px;
+    overflow: hidden;
   }
+
 
   .heroInner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 16px;
+  }
+  
+    .heroText h1 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .heroText .accent {
+    font-size: 1.2em;
+    margin-bottom: 16px;
+  }
+
+  .meta {
+    font-size: 12px;
+    margin-top: 20px;
   }
 
   .photoGroup {
     width: 100%;
+    display: flex;
     height: auto;
   }
 
@@ -111,9 +130,13 @@ button:focus-visible {
   }
 
   .photoImg {
-    width: 220px;
+    width: 160px;
     height: auto;
     border-radius: 16px;
+    display: none;
+  }
+  .scrollHint {
+    display: none;
   }
 
   /*Section*/
@@ -126,6 +149,16 @@ button:focus-visible {
     padding: 20px;
   }
 
+  .section h1 {
+    font-size: 18px;
+  }
+.section h2
+  {
+    font-size: 16px;
+  }
+  .section p {
+    font-size: 14px;
+  }
 
 /*Contact*/
   .contactIntro {
