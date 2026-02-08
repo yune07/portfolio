@@ -164,4 +164,8 @@ button:focus-visible {
   .contactIntro {
     max-width: 100%;
   }
+  .contactLinks {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
