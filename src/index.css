@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -66,5 +71,64 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+@media (max-width: 768px) {
+
+  /*Navbar*/
+  .brand {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+    .navInner {
+    padding: 2px 6px;
+    gap: 12px;
+  }
+    .navLinks a {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  /*Hero*/
+  .hero {
+    height: auto;
+    padding-top: 120px;
+  }
+
+  .heroInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .photoGroup {
+    width: 100%;
+    height: auto;
+  }
+
+  .photoBg {
+    display: none;
+  }
+
+  .photoImg {
+    width: 220px;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  /*Section*/
+  .section {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .TextBlock {
+    padding: 20px;
+  }
+
+
+/*Contact*/
+  .contactIntro {
+    max-width: 100%;
   }
 }
