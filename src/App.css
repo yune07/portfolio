@@ -124,20 +124,7 @@
   z-index: 2;
 }
 
-.scrollHint {
-  position: absolute;
-  bottom: 150px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.1;
-}
 
-.scrollArrow {
-  width: 100px;
-  height: auto;
-  display: block;
-  animation: nudge 2s ease-in-out infinite;
-}
 
 
 
