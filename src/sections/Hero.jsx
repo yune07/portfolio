@@ -3,7 +3,12 @@ import profileImg from "../assets/profile.png";
 
 export default function Hero() {
   return (
-    <section className="hero" aria-label="Intro">
+    <section id="home" className="hero" aria-label="Intro">
+      <div
+                className="scrollSentinel"
+                data-id="home"
+                style={{ position: "absolute", top: 0 }}
+            />
       <div className="heroInner">
         <div className="heroText">
           <span className="meta">PROFESSIONAL PORTFOLIO</span>
